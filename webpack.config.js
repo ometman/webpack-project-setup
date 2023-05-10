@@ -7,6 +7,10 @@ module.exports = {
     index: './src/index.js',
     print: './src/print.js',
   }, 
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   output: {
     // filename: 'main.js',
     filename: '[name].bundle.js',
@@ -39,4 +43,7 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
+  optimization: {
+    runtimeChunk: 'single',
+  },
 };
